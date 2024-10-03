@@ -4,13 +4,17 @@ import back from "../../assets/Back.png";
 
 interface TapBarProps {
     text: string,
+    clickHandler ?: () => void;
 }
 
-const TapBar: React.FC<TapBarProps> = ({ text}) => {
+const TapBar: React.FC<TapBarProps> = ({ text,clickHandler }) => {
     const navigate = useNavigate(); 
 
     const handleBackClick = () => {
-        navigate(-1); // 이전 페이지로 이동
+        if (!clickHandler)
+            navigate(-1); // 이전 페이지로 이동
+        else
+            clickHandler();
     };
 
     return (

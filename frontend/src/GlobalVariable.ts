@@ -12,3 +12,11 @@ export const USER_LATITUDE = "userLatitude";
 export const USER_LONGITUDE = "userLongitude";
 
 export const KAKAO_API_TOKEN = "";
+
+
+export const EMPTY_IMG = "empty.txt";
+export const PAGE_LOAD = 5;
+
+
+export const JJIM_HOSPI_LIST = "jjimHospiList";
+export const JJIM_POST_LIST = "jjimPostList";

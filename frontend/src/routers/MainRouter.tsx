@@ -21,6 +21,14 @@ import ReviewCommentPage from "../routes/Hospital/Review/ReviewComment";
 import StarRating from "../routes/Hospital/Review/starRatingPage";
 import WriteReview from "../routes/Hospital/Review/WriteReview";
 import ReviewInReview from "../routes/Hospital/Review/ReviewAndReview";
+import MyWritesPage from "../routes/mypage/writes/MyWritesPage";
+import MyLikesPage from "../routes/mypage/good/MyLikesPage";
+import CommunityPage from "../routes/Community/CommunityPage";
+import ComWrite from "../routes/Community/write/ComWrite";
+import DragAndDropUpload from "../routes/Community/write/test";
+import MyReview from "../routes/Hospital/Review/MyReview";
+import MyWrite from "../routes/community/MyWrite";
+import MyLike from "../routes/community/MyLike";
 
 const SearchRoute = () => {
     const location = useLocation();
@@ -90,33 +98,33 @@ export const mainRouter = [
     {
         path: "/profile/mypage",
         element: (
-            <Layout>
+            <Layout2>
                 <MyPage />
-            </Layout>
+            </Layout2>
         )
     },
     {
         path: "/profile/mypage/modify",
         element: (
-            <Layout>
+            <Layout2>
                 <ModifyMyPage />
-            </Layout>
+            </Layout2>
         )
     },
     {
         path:"/search",
         element:(
-            <Layout>
+            <Layout2>
                 <SearchRoute/>
-            </Layout>
+            </Layout2>
         )
     },
     {
         path:"/search2",
         element:(
-            <Layout>
+            <Layout2>
                 <SearchPage2 />
-            </Layout>
+            </Layout2>
         )
     },
     {
@@ -138,28 +146,89 @@ export const mainRouter = [
     {
         path: "/search/hospital/:id",
         element: (
-            <Layout>
+            <Layout2>
                 <HospiInfo />
-            </Layout>
+            </Layout2>
         )
     },
     {
         path: "/search/hospital/:id/review",
         element: (
-            <Layout>
+            <Layout2>
                 <WriteReview />
-            </Layout>
+            </Layout2>
         )
     },
     {
         path: "/search/hospital/:id/reviews",
         element: (
-            <Layout>
+            <Layout2>
                 <ReviewInReview />
+            </Layout2>
+        )
+    },
+    {
+        path: "/heart",
+        element: (
+            <Layout>
+                <MyLikesPage />
             </Layout>
         )
     },
+    {
+        path: "/community",
+        element: (
+            <Layout>
+                <CommunityPage />
+            </Layout>
+        )
+    },
+    {
+        path: "/community/write",
+        element: (
+            <Layout>
+                <ComWrite />
+            </Layout>
+        )
+    },
+    {
+        path: "/myreview",
+        element: (
+            <Layout>
+                <MyReview />
+            </Layout>
+        )
+    },
+    {
+        path: "/myWrite",
+        element: (
+            <Layout2>
+                <MyWrite />
+            </Layout2>
+        )
+    },
+    {
+        path: "/myLike",
+        element: (
+            <Layout2>
+                <MyLike />
+            </Layout2>
+        )
+    },
+    {
+        path: "/test",
+        element: (
+            <Layout>
+                <DragAndDropUpload />
+            </Layout>
+        )
+
+    }
+
 ];
 
 const router = createBrowserRouter(mainRouter);
+
+
+
 export default router;
