@@ -1,0 +1,26 @@
+.Vstyled-container {
+    /* 병원1 */
+    position: relative; /*가장 바깥 컨테이너는 항상 relative라고 생각할 것*/
+    width: 350px;
+    height: 120px;
+    left: 10px;
+    display: flex;
+    flex-direction: column; /* 상하로 배치 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    justify-content: flex-start; /* 상단 정렬 */
+    /*20px;*/
+}
+.ADButton-text {
+    /* 똑똑플란트치과의원 */
+    position: relative; /*내부 컨테이너는 절대위치로 조정해도됨 */
+
+    line-height: 1;
+    text-align: left;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    padding-bottom: 2px;
+    /* identical to box height */
+    color: #000000;
+}
